@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="DataGovView.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelFormLayout id="pfl1">
+                    <af:inputText value="#{bindings.username1.inputValue}" label="#{bindings.username1.hints.label}"
+                                  required="#{bindings.username1.hints.mandatory}"
+                                  columns="#{bindings.username1.hints.displayWidth}"
+                                  maximumLength="#{bindings.username1.hints.precision}"
+                                  shortDesc="#{bindings.username1.hints.tooltip}" id="it1">
+                        <f:validator binding="#{bindings.username1.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.password1.inputValue}" label="#{bindings.password1.hints.label}"
+                                  required="#{bindings.password1.hints.mandatory}"
+                                  columns="#{bindings.password1.hints.displayWidth}"
+                                  maximumLength="#{bindings.password1.hints.precision}"
+                                  shortDesc="#{bindings.password1.hints.tooltip}" id="it2">
+                        <f:validator binding="#{bindings.password1.validator}"/>
+                    </af:inputText>
+                    <af:button actionListener="#{bindings.login1.execute}" text="login1"
+                               disabled="#{!bindings.login1.enabled}" id="b1" action="login"/>
+                </af:panelFormLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

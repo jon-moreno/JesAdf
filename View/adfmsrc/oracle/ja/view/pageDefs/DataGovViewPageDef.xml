@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="DataGovViewPageDef"
+                Package="oracle.ja.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="boolean" Name="login1_Return" IsQueriable="false" IsUpdateable="0"
+                DefaultValue="${bindings.login1.result}"/>
+      <variable Type="java.lang.String" Name="login1_username" IsQueriable="false"/>
+      <variable Type="java.lang.String" Name="login1_password" IsQueriable="false"/>
+    </variableIterator>
+    <iterator Binds="root" RangeSize="25" DataControl="DUMMYLoginService" id="DUMMYLoginServiceIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="login" RequiresUpdateModel="true" Action="invokeMethod" MethodName="login"
+                  IsViewObjectMethod="false" DataControl="DUMMYLoginService"
+                  InstanceName="data.DUMMYLoginService.dataProvider"
+                  ReturnName="data.DUMMYLoginService.methodResults.login_DUMMYLoginService_dataProvider_login_result"/>
+    <attributeValues IterBinding="DUMMYLoginServiceIterator" id="password">
+      <AttrNames>
+        <Item Value="password"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DUMMYLoginServiceIterator" id="username">
+      <AttrNames>
+        <Item Value="username"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="Return">
+      <AttrNames>
+        <Item Value="login1_Return"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="login1" RequiresUpdateModel="true" Action="invokeMethod" MethodName="login"
+                  IsViewObjectMethod="false" DataControl="DUMMYLoginService"
+                  InstanceName="data.DUMMYLoginService.dataProvider">
+      <NamedData NDName="username" NDType="java.lang.String" NDValue="${bindings.login1_username}"/>
+      <NamedData NDName="password" NDType="java.lang.String" NDValue="${bindings.login1_password}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="username1">
+      <AttrNames>
+        <Item Value="login1_username"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="password1">
+      <AttrNames>
+        <Item Value="login1_password"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

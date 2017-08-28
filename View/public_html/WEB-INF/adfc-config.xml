@@ -1,2 +1,62 @@
 <?xml version="1.0" encoding="windows-1252" ?>
-<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2"></adfc-config>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="CustomerView"></view>
+  <view id="DataGovView">
+    <page>/DataGovView.jspx</page>
+  </view>
+  <task-flow-call id="CustomerRegistrationTaskFlow"></task-flow-call>
+  <task-flow-call id="DataGovApprovalTaskFlow">
+    <task-flow-reference>
+      <document>/WEB-INF/DataGovApprovalTaskFlow.xml</document>
+      <id>DataGovApprovalTaskFlow</id>
+    </task-flow-reference>
+  </task-flow-call>
+  <view id="DataGovPendingCustomerView">
+    <page>/DataGovPendingCustomerView.jspx</page>
+  </view>
+  <router id="router1">
+    <case id="__14">
+      <expression>#{DUMMYLoginService['authenticated']}</expression>
+      <outcome>success</outcome>
+    </case>
+    <default-outcome>fail</default-outcome>
+  </router>
+  <view id="DataGovApprovalDashboard"></view>
+  <control-flow-rule id="__9">
+    <from-activity-id>CustomerView</from-activity-id>
+    <control-flow-case id="__10">
+      <from-outcome>register</from-outcome>
+      <to-activity-id>CustomerRegistrationTaskFlow</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__15">
+    <from-activity-id>router1</from-activity-id>
+    <control-flow-case id="__16">
+      <from-outcome>success</from-outcome>
+      <to-activity-id>DataGovPendingCustomerView</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__17">
+      <from-outcome>fail</from-outcome>
+      <to-activity-id>DataGovView</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__21">
+    <from-activity-id>DataGovView</from-activity-id>
+    <control-flow-case id="__22">
+      <from-outcome>login</from-outcome>
+      <to-activity-id>router1</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__1">
+    <from-activity-id>DataGovPendingCustomerView</from-activity-id>
+    <control-flow-case id="__2">
+      <from-outcome>chooseCustomer</from-outcome>
+      <to-activity-id>DataGovApprovalDashboard</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__3">
+    <managed-bean-name>DUMMYLoginService</managed-bean-name>
+    <managed-bean-class>DUMMYLoginService</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

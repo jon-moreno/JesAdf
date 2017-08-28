@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.0.31" id="DataBindings"
+             SeparateXMLFiles="false" Package="oracle.ja.view" ClientType="Generic">
+  <pageMap>
+    <page path="/DataGovView.jspx" usageId="oracle_ja_view_DataGovViewPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="oracle_ja_view_DataGovViewPageDef" path="oracle.ja.view.pageDefs.DataGovViewPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="DUMMYLoginService" path="oracle.ja.view.DUMMYLoginService"/>
+  </dataControlUsages>
+</Application>
