@@ -15,21 +15,6 @@
       <property
          name="exceptionHandler">false</property>
    </View>
-   <View
-      id="View3">
-      <property
-         name="activityId">DataGovView</property>
-      <property
-         name="x">443.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>DataGovView&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">131.59766</property>
-      <property
-         name="page">/DataGovView.jspx</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
    <TaskFlowCall
       id="TaskFlowCall4">
       <property
@@ -41,7 +26,11 @@
       <property
          name="y">308.79297</property>
       <property
+         name="documentReference">/WEB-INF/CustomerRegistrationTaskFlow.xml</property>
+      <property
          name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">CustomerRegistrationTaskFlow</property>
    </TaskFlowCall>
    <ControlFlowCase
       islink="true"
@@ -51,100 +40,6 @@
       <property
          name="fromOutcome">register</property>
       <property
-         name="sdm:polyPoints">B50,218.0,180.84473,218.0,254.44238,T50</property>
-   </ControlFlowCase>
-   <TaskFlowCall
-      id="TaskFlowCall16">
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>DataGovApprovalTaskFlow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
-      <property
-         name="activityId">DataGovApprovalTaskFlow</property>
-      <property
-         name="x">638.0283</property>
-      <property
-         name="y">251.24121</property>
-      <property
-         name="exceptionHandler">false</property>
-   </TaskFlowCall>
-   <View
-      id="View10">
-      <property
-         name="activityId">DataGovPendingCustomerView</property>
-      <property
-         name="x">778.709</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>DataGovPendingCustomerView&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">339.6953</property>
-      <property
-         name="page">/DataGovPendingCustomerView.jspx</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
-   <Router
-      id="Router16">
-      <property
-         name="activityId">router1</property>
-      <property
-         name="x">781.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>router1&lt;/b>&lt;/p>&lt;p>Activity Type:  Router&lt;/p></property>
-      <property
-         name="y">126.59766</property>
-      <property
-         name="exceptionHandler">false</property>
-   </Router>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase17"
-      from="Router16"
-      to="View10">
-      <property
-         name="fromOutcome">success</property>
-      <property
-         name="sdm:polyPoints">B50,781.0,180.24707,778.709,285.34473,T50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase18"
-      from="Router16"
-      to="View3">
-      <property
-         name="fromOutcome">fail</property>
-      <property
-         name="sdm:polyPoints">L46,739.93164,122.74707,484.0,127.74707,R46</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase21"
-      from="View3"
-      to="Router16">
-      <property
-         name="fromOutcome">login</property>
-      <property
-         name="sdm:polyPoints">R54,484.06836,134.74707,740.0,129.74707,L54</property>
-   </ControlFlowCase>
-   <View
-      id="View12">
-      <property
-         name="activityId">DataGovApprovalDashboard</property>
-      <property
-         name="x">776.0</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>DataGovApprovalDashboard&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
-      <property
-         name="y">491.49414</property>
-      <property
-         name="exceptionHandler">false</property>
-   </View>
-   <ControlFlowCase
-      islink="true"
-      id="ControlFlowCase13"
-      from="View10"
-      to="View12">
-      <property
-         name="fromOutcome">chooseCustomer</property>
-      <property
-         name="sdm:polyPoints">B50,778.709,393.34473,776.0,437.14355,T50</property>
+         name="sdm:polyPoints">B50,218.0,181.0114,218.0,254.27571,T50</property>
    </ControlFlowCase>
 </SDM>

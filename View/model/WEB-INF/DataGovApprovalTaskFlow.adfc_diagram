@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1">
+      <property
+         name="x">124.708984</property>
+      <property
+         name="y">266.5</property>
+   </OverallProperties>
+   <View
+      id="View2">
+      <property
+         name="activityId">DataGovApprovalDashboard</property>
+      <property
+         name="x">366.1289</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>DataGovApprovalDashboard&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">91.149414</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">DataGovPendingCustomerView</property>
+      <property
+         name="x">124.708984</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>DataGovPendingCustomerView&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">98.79883</property>
+      <property
+         name="page">/DataGovPendingCustomerView.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View3"
+      to="View2">
+      <property
+         name="tosrcid">__2</property>
+      <property
+         name="fromOutcome">chooseCustomer</property>
+      <property
+         name="fromsrcid">__1</property>
+      <property
+         name="sdm:polyPoints">R50,165.70898,98.44824,325.1289,90.79883,L50</property>
+   </ControlFlowCase>
+</SDM>
