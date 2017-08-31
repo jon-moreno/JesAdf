@@ -40,6 +40,6 @@
       <property
          name="fromOutcome">register</property>
       <property
-         name="sdm:polyPoints">B50,218.0,181.0114,218.0,254.27571,T50</property>
+         name="sdm:polyPoints">B50,217.99998,181.59471,217.99998,253.69238,T50</property>
    </ControlFlowCase>
 </SDM>

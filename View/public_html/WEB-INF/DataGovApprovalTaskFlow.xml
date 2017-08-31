@@ -6,7 +6,7 @@
       <shared/>
     </data-control-scope>
     <view id="DataGovPendingCustomerView">
-      <page>/DataGovPendingCustomerView.jspx</page>
+      <page>/pages/DataGovPendingCustomerView.jspx</page>
     </view>
     <view id="DataGovApprovalDashboard"></view>
     <control-flow-rule id="__1">

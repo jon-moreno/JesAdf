@@ -12,99 +12,125 @@
       <property
          name="activityId">ConfirmationScreen</property>
       <property
-         name="x">485.05957</property>
+         name="x">319.05957</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>ConfirmationScreen&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">-53.20117</property>
+         name="y">-67.603516</property>
       <property
          name="exceptionHandler">false</property>
+      <property
+         name="trainStop">true</property>
    </View>
-   <MethodCall
-      id="MethodCall3">
-      <property
-         name="activityId">commit</property>
-      <property
-         name="x">588.584</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>commit&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="y">74.396484</property>
-      <property
-         name="exceptionHandler">false</property>
-   </MethodCall>
    <View
       id="View4">
       <property
          name="activityId">AddressInfo</property>
       <property
-         name="x">297.11035</property>
+         name="x">183.11035</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>AddressInfo&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">-46.20117</property>
+         name="y">-62.902344</property>
       <property
          name="exceptionHandler">false</property>
+      <property
+         name="trainStop">true</property>
    </View>
-   <MethodCall
-      id="MethodCall5">
-      <property
-         name="activityId">createAddress</property>
-      <property
-         name="x">398.82324</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>createAddress&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="y">79.09766</property>
-      <property
-         name="exceptionHandler">false</property>
-   </MethodCall>
-   <MethodCall
-      id="MethodCall6">
-      <property
-         name="activityId">rollback</property>
-      <property
-         name="x">-11.990234</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>rollback&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="y">96.09766</property>
-      <property
-         name="exceptionHandler">false</property>
-   </MethodCall>
-   <MethodCall
-      id="MethodCall8">
-      <property
-         name="activityId">createCustomer</property>
-      <property
-         name="x">213.64941</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>createCustomer&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="y">79.09766</property>
-      <property
-         name="exceptionHandler">false</property>
-   </MethodCall>
    <View
       id="View9">
       <property
-         name="activityId">PersonalInfo</property>
+         name="activityId">CustomerInfo</property>
       <property
-         name="x">119.68848</property>
+         name="x">25.688477</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>PersonalInfo&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="start">true</property>
       <property
-         name="y">-45.603516</property>
+         name="description">&lt;html>&lt;p>&lt;b>CustomerInfo&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">-64.00586</property>
+      <property
+         name="page">/pages/CustomerInfo.jspx</property>
       <property
          name="exceptionHandler">false</property>
+      <property
+         name="trainStop">true</property>
    </View>
    <WildcardControlFlowRule
-      id="WildcardControlFlowRule10">
+      id="WildcardControlFlowRule17">
       <property
          name="activityId">*</property>
       <property
-         name="x">-17.0</property>
+         name="srcid">__1</property>
       <property
-         name="y">-75.40234</property>
+         name="x">305.0</property>
+      <property
+         name="y">69.643555</property>
    </WildcardControlFlowRule>
+   <TaskFlowReturn
+      id="TaskFlowReturn20">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="x">485.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="y">88.74121</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase21"
+      from="WildcardControlFlowRule17"
+      to="TaskFlowReturn20">
+      <property
+         name="fromOutcome">cancel</property>
+      <property
+         name="sdm:polyPoints">R50,341.0,69.79297,444.0,88.390625,L50</property>
+   </ControlFlowCase>
+   <TrainFlow
+      islink="true"
+      id="TrainFlow22"
+      from="View9"
+      to="View4">
+      <property
+         name="sdm:polyPoints">R50,66.68848,-64.356445,142.11035,-63.25293,L50</property>
+   </TrainFlow>
+   <TrainFlow
+      islink="true"
+      id="TrainFlow23"
+      from="View4"
+      to="View2">
+      <property
+         name="sdm:polyPoints">R50,224.11035,-63.25293,278.05957,-67.9541,L50</property>
+   </TrainFlow>
+   <TaskFlowReturn
+      id="TaskFlowReturn24">
+      <property
+         name="activityId">taskFlowReturn2</property>
+      <property
+         name="x">484.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn2&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn2&lt;/p></property>
+      <property
+         name="y">-69.75293</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase25"
+      from="View2"
+      to="TaskFlowReturn24">
+      <property
+         name="fromOutcome">submit</property>
+      <property
+         name="sdm:polyPoints">R50,360.05957,-67.9541,443.0,-70.103516,L50</property>
+   </ControlFlowCase>
 </SDM>
