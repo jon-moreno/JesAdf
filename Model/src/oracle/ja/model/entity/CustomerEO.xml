@@ -290,4 +290,11 @@
       <Item Value="oracle.ja.model.entity.CustomerEO.Status"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="oracle.ja.model.entity.CustomerEO"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+  </Permission>
 </Entity>
