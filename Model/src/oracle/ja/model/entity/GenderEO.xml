@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="GenderEO"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="GENDERS"
+  AliasName="GenderEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="GenderId"
+    IsNotNull="true"
+    ColumnName="GENDER_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="GENDERS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="GenderType"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="GENDER_TYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="GENDERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="CustomerEO"
+    Association="oracle.ja.model.entity.CustGenderFkAssoc"
+    AssociationEnd="oracle.ja.model.entity.CustGenderFkAssoc.CustomerEO"
+    AssociationOtherEnd="oracle.ja.model.entity.CustGenderFkAssoc.GenderEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="ApprovedGenderPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="APPROVED_GENDER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.entity.GenderEO.GenderId"/>
+    </AttrArray>
+  </Key>
+</Entity>
