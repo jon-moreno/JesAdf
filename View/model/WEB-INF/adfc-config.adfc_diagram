@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">CustomerView</property>
+      <property
+         name="x">218.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CustomerView&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">127.19531</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall4">
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CustomerRegistrationTaskFlow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">CustomerRegistrationTaskFlow</property>
+      <property
+         name="x">218.0</property>
+      <property
+         name="y">308.79297</property>
+      <property
+         name="documentReference">/WEB-INF/CustomerRegistrationTaskFlow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">CustomerRegistrationTaskFlow</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase14"
+      from="View2"
+      to="TaskFlowCall4">
+      <property
+         name="fromOutcome">register</property>
+      <property
+         name="sdm:polyPoints">B50,217.99998,181.59471,217.99998,253.69238,T50</property>
+   </ControlFlowCase>
+</SDM>

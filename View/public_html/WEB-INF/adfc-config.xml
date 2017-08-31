@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="windows-1252" ?>
-<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2"></adfc-config>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="CustomerView"></view>
+  <task-flow-call id="CustomerRegistrationTaskFlow">
+    <task-flow-reference>
+      <document>/WEB-INF/CustomerRegistrationTaskFlow.xml</document>
+      <id>CustomerRegistrationTaskFlow</id>
+    </task-flow-reference>
+  </task-flow-call>
+  <control-flow-rule id="__9">
+    <from-activity-id>CustomerView</from-activity-id>
+    <control-flow-case id="__10">
+      <from-outcome>register</from-outcome>
+      <to-activity-id>CustomerRegistrationTaskFlow</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__3">
+    <managed-bean-name>DUMMYLoginService</managed-bean-name>
+    <managed-bean-class>DUMMYLoginService</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

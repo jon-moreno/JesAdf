@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:pageTemplateDef var="attrs" definition="private">
+        <af:toolbar id="pt_t2">
+            <af:train id="pt_t1"/>
+            <af:group id="pt_g1">
+                <af:trainButtonBar id="pt_tbb1"/>
+                <af:button text="Cancel" id="pt_b1" action="cancel"/>
+            </af:group>
+        </af:toolbar>
+        <af:facetRef facetName="trainstop"/>
+        <af:xmlContent>
+            <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+                <description/>
+                <display-name>TrainTemplate</display-name>
+            </component>
+        </af:xmlContent>
+    </af:pageTemplateDef>
+</jsp:root>
