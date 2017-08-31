@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31"
+                id="DataGovPendingCustomerViewPageDef" Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CustomerVO1" RangeSize="25" DataControl="AppModuleDataControl" id="CustomerVO1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="CustomerVO1Iterator" id="CustomerVO1">
+      <nodeDefinition DefName="oracle.ja.model.view.CustomerVO" Name="CustomerVO10">
+        <AttrNames>
+          <Item Value="CustomerId"/>
+          <Item Value="Status"/>
+          <Item Value="FirstName"/>
+          <Item Value="MiddleName"/>
+          <Item Value="LastName"/>
+          <Item Value="Ssn"/>
+          <Item Value="Gender"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="Dob"/>
+          <Item Value="ResidentialAddress"/>
+          <Item Value="MailingAddress"/>
+          <Item Value="DateRegistered"/>
+          <Item Value="DateApproved"/>
+          <Item Value="DateArchived"/>
+          <Item Value="AdminApproved"/>
+          <Item Value="AdminArchived"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

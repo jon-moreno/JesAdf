@@ -171,6 +171,9 @@
   <listener>
     <listener-class>oracle.adf.mbean.share.config.ADFConfigLifeCycleCallBack</listener-class>
   </listener>
+  <listener>
+    <listener-class>oracle.bc4j.mbean.BC4JConfigLifeCycleCallBack</listener-class>
+  </listener>
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>adfAuthentication</web-resource-name>

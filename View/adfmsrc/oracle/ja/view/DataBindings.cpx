@@ -5,13 +5,20 @@
     <page path="/pages/DataGovView.jspx" usageId="oracle_ja_view_DataGovViewPageDef"/>
     <page path="/templates/TrainTemplate.jspx" usageId="oracle_ja_view_TrainTemplatePageDef"/>
     <page path="/pages/CustomerInfo.jspx" usageId="oracle_ja_view_CustomerInfoPageDef"/>
+    <page path="/pages/DataGovPendingCustomerView.jspx" usageId="oracle_ja_view_DataGovPendingCustomerViewPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="oracle_ja_view_DataGovViewPageDef" path="oracle.ja.view.pageDefs.DataGovViewPageDef"/>
     <page id="oracle_ja_view_TrainTemplatePageDef" path="templates.TrainTemplatePageDef"/>
     <page id="oracle_ja_view_CustomerInfoPageDef" path="pages.CustomerInfoPageDef"/>
+    <page id="oracle_ja_view_DataGovPendingCustomerViewPageDef" path="pages.DataGovPendingCustomerViewPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <dc id="DUMMYLoginService" path="oracle.ja.view.DUMMYLoginService"/>
+    <BC4JDataControl id="AppModuleDataControl" Package="oracle.ja.model.module"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
   </dataControlUsages>
 </Application>
