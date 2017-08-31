@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CustGenderFkLink"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  EntityAssociation="oracle.ja.model.entity.CustGenderFkAssoc">
+  <ViewLinkDefEnd
+    Name="GenderVO"
+    Cardinality="1"
+    Source="true"
+    Owner="oracle.ja.model.view.GenderVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="GenderVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.view.GenderVO.GenderId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="CustomerVO"
+    Cardinality="-1"
+    Owner="oracle.ja.model.view.CustomerVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CustomerVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.view.CustomerVO.Gender"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

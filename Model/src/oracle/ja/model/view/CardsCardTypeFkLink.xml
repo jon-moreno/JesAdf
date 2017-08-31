@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CardsCardTypeFkLink"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  EntityAssociation="oracle.ja.model.entity.CardsCardTypeFkAssoc">
+  <ViewLinkDefEnd
+    Name="CardTypeVO"
+    Cardinality="1"
+    Source="true"
+    Owner="oracle.ja.model.view.CardTypeVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="CardTypeVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.view.CardTypeVO.CardTypeId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="CardVO"
+    Cardinality="-1"
+    Owner="oracle.ja.model.view.CardVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="CardVO"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.view.CardVO.CardType"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>
