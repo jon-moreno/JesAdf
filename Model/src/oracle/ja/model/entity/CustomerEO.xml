@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CustomerEO"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="CUSTOMERS"
+  AliasName="CustomerEO"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="CustomerId"
+    IsNotNull="true"
+    ColumnName="CUSTOMER_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Status"
+    IsNotNull="true"
+    ColumnName="STATUS"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="FirstName"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="FIRST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MiddleName"
+    Precision="50"
+    ColumnName="MIDDLE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastName"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="LAST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ssn"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="SSN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Gender"
+    IsNotNull="true"
+    ColumnName="GENDER"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="Email"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="EMAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PhoneNumber"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="PHONE_NUMBER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CUSTOMERS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Dob"
+    IsNotNull="true"
+    ColumnName="DOB"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="ResidentialAddress"
+    IsNotNull="true"
+    ColumnName="RESIDENTIAL_ADDRESS"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="MailingAddress"
+    IsNotNull="true"
+    ColumnName="MAILING_ADDRESS"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="DateRegistered"
+    IsNotNull="true"
+    ColumnName="DATE_REGISTERED"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="DateApproved"
+    ColumnName="DATE_APPROVED"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="DateArchived"
+    ColumnName="DATE_ARCHIVED"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="AdminApproved"
+    ColumnName="ADMIN_APPROVED"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <Attribute
+    Name="AdminArchived"
+    ColumnName="ADMIN_ARCHIVED"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="CUSTOMERS"/>
+  <AccessorAttribute
+    Name="AddressEO"
+    Association="oracle.ja.model.entity.CustAddrMailFkAssoc"
+    AssociationEnd="oracle.ja.model.entity.CustAddrMailFkAssoc.AddressEO"
+    AssociationOtherEnd="oracle.ja.model.entity.CustAddrMailFkAssoc.CustomerEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="AddressEO1"
+    Association="oracle.ja.model.entity.CustAddrRestFkAssoc"
+    AssociationEnd="oracle.ja.model.entity.CustAddrRestFkAssoc.AddressEO1"
+    AssociationOtherEnd="oracle.ja.model.entity.CustAddrRestFkAssoc.CustomerEO1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="AdminEO"
+    Association="oracle.ja.model.entity.CustAdminAppFkAssoc"
+    AssociationEnd="oracle.ja.model.entity.CustAdminAppFkAssoc.AdminEO"
+    AssociationOtherEnd="oracle.ja.model.entity.CustAdminAppFkAssoc.CustomerEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="AdminEO1"
+    Association="oracle.ja.model.entity.CustAdminArcFkAssoc"
+    AssociationEnd="oracle.ja.model.entity.CustAdminArcFkAssoc.AdminEO1"
+    AssociationOtherEnd="oracle.ja.model.entity.CustAdminArcFkAssoc.CustomerEO1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="GenderEO"
+    Association="oracle.ja.model.entity.CustGenderFkAssoc"
+    AssociationEnd="oracle.ja.model.entity.CustGenderFkAssoc.GenderEO"
+    AssociationOtherEnd="oracle.ja.model.entity.CustGenderFkAssoc.CustomerEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="StatusEO"
+    Association="oracle.ja.model.entity.CustStatusFkAssoc"
+    AssociationEnd="oracle.ja.model.entity.CustStatusFkAssoc.StatusEO"
+    AssociationOtherEnd="oracle.ja.model.entity.CustStatusFkAssoc.CustomerEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="CustomersPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="CUSTOMERS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.entity.CustomerEO.CustomerId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CustAddrMailFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="ARCHIVED_ADDRESS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUST_ADDR_MAIL_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.entity.CustomerEO.MailingAddress"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CustAddrRestFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="ARCHIVED_ADDRESS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUST_ADDR_REST_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.entity.CustomerEO.ResidentialAddress"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CustAdminAppFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="APPROVED_ADMIN_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUST_ADMIN_APP_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.entity.CustomerEO.AdminApproved"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CustAdminArcFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="APPROVED_ADMIN_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUST_ADMIN_ARC_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.entity.CustomerEO.AdminArchived"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CustGenderFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="APPROVED_GENDER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUST_GENDER_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.entity.CustomerEO.Gender"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CustStatusFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="STATUS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CUST_STATUS_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.entity.CustomerEO.Status"/>
+    </AttrArray>
+  </Key>
+</Entity>

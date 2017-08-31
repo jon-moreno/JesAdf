@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CustAdminArcFkAssoc"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="AdminEO1"
+    Cardinality="1"
+    Source="true"
+    Owner="oracle.ja.model.entity.AdminEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="AdminEO1"/>
+      <Attr Name="_foreignKey" Value="oracle.ja.model.entity.AdminEO.ApprovedAdminPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.entity.AdminEO.AdminId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="CustomerEO1"
+    Cardinality="-1"
+    Owner="oracle.ja.model.entity.CustomerEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="CustomerEO1"/>
+      <Attr Name="_foreignKey" Value="oracle.ja.model.entity.CustomerEO.CustAdminArcFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="oracle.ja.model.entity.CustomerEO.AdminArchived"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>
